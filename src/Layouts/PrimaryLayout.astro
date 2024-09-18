@@ -14,7 +14,9 @@ const {title = "Blog Haedless CMS"} = Astro.props;
 	</head>
 	<body class="base-layout">
 		<Header/>
-		<slot />
+		<main>
+			<slot />
+		</main>
 	</body>
 </html>
 

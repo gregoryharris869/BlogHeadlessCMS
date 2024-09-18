@@ -108,6 +108,24 @@ body {
 
 /* Utility Classes */
 
+main,
+section,
+header,
+footer {
+  container-type: inline-size;
+}
+
+.three-columns {
+  display: grid;
+  gap: 1rem;
+  @container (width > calc(3 * 25ch)) {
+    grid-template-columns: repeat(3, 1fr);
+    > .span-2 {
+      grid-column: span 2;
+    }
+  }
+}
+
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
